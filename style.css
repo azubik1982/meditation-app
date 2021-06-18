@@ -1,15 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  font-size: 10px;
+  font-family:  'Montserrat', sans-serif;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  height: 660px;
+  margin: 0 auto;
 }
 
 .app {
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-family: "Montserrat", sans-serif;
 }
 
 .time-select,
@@ -87,7 +91,7 @@
   color: white;
   position: absolute;
   font-size: 50px;
-  bottom: 10%;
+  bottom: 0%;
 }
 
 video {
