@@ -15,7 +15,7 @@ let fakeDuration = 600;
 
 outline.style.strokeDashoffset = outlineLength;
 outline.style.strokeDasharray = outlineLength;
-// timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${addZero(Math.floor(fakeDuration % 60))}`;
+timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${addZero(Math.floor(fakeDuration % 60))}`;
 
 // Add Zeros
 function addZero(n) {
