@@ -15,7 +15,10 @@ let fakeDuration = 600;
 
 outline.style.strokeDashoffset = outlineLength;
 outline.style.strokeDasharray = outlineLength;
-timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${addZero(Math.floor(fakeDuration % 60))}`;
+
+function timeCalc() {
+  timeDisplay.textContent = `${addZero(Math.floor(fakeDuration / 60))}:${addZero(Math.floor(fakeDuration % 60))}`;
+}
 
 // Add Zeros
 function addZero(n) {
@@ -46,9 +49,7 @@ const restartSong = song =>{
 timeSelect.forEach(option => {
   option.addEventListener("click", function() {
     fakeDuration = this.getAttribute("data-time");
-    timeDisplay.textContent = `${addZero(Math.floor(fakeDuration / 60))}:${addZero(Math.floor(
-      fakeDuration % 60
-    ))}`;
+    timeCalc();
   });
 });
 
@@ -80,3 +81,5 @@ song.ontimeupdate = function() {
     video.pause();
   }
 };
+
+timeCalc();
